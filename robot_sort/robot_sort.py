@@ -7,7 +7,7 @@ class SortingRobot:
         self._item = None       # The item the robot is holding
         self._position = 0      # The list position the robot is at
         self._light = "OFF"     # The state of the robot's light
-        self._time = 0          # A time counter (stretch)
+        # self._time = 0          # A time counter (stretch)
 
     def can_move_right(self):
         """
@@ -96,8 +96,22 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        # selection sort
+        arr = self._list
+        for i in range(0, len(arr) -1): # going through list beginning from front to last el
+            curr_i = self._list[i] # tracking/marking the current el we are on
+            lowest_val = curr_i
+            
+            for j in range(curr_i + 1, len(arr)):
+                if arr[lowest_val] > arr[j]:
+                    lowest_val = j
+        
+            arr[curr_i], arr[lowest_val] = arr[lowest_val], arr[curr_i]
+
+        return arr
+                
+
+
 
 
 if __name__ == "__main__":
