@@ -96,20 +96,16 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # selection sort
-        arr = self._list
-        for i in range(0, len(arr) -1): # going through list beginning from front to last el
-            curr_i = self._list[i] # tracking/marking the current el we are on
-            lowest_val = curr_i
-            
-            for j in range(curr_i + 1, len(arr)):
-                if arr[lowest_val] > arr[j]:
-                    lowest_val = j
+        # bubble sort
+        is_swapped = True
+        arr= self._list
         
-            arr[curr_i], arr[lowest_val] = arr[lowest_val], arr[curr_i]
-
-        return arr
-                
+        while is_swapped:
+            is_swapped = False
+            for i in range(0, len(arr) - 1):
+                if arr[i] > arr[i + 1]:
+                    arr[i], arr[i + 1] = arr[i + 1], arr[i]  # swapping sides
+                    is_swapped = True
 
 
 

@@ -5,8 +5,8 @@ Your function must utilize recursion. It cannot contain any loops.
 '''
 def count_th(word):
     # 1. what is my base case?
-    if len(str(word)) is None:
-        return None
+    if len(str(word)) == 2:
+        return word
     
     if len(str(word)) > 0:
         if 'th' in str(word.lower()):
