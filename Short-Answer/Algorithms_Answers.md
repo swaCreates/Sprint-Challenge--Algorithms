@@ -19,8 +19,14 @@ answer = 0(n) also known as linear
 
 purpose = what is the value of f?
 
-story building = input of n
-eggs = ? (anonymous)
+building_story = input of n
+eggs = (anonymous)
 floor f = input of f
+floor = (which should track what floor we are on)
 
-if 
+for floors in story building:
+    if floor >= floor_f:
+        eggs get broken
+    else:
+
+
